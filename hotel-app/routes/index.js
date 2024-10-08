@@ -59,4 +59,20 @@ router.get("/about", function (req, res, next) {
   res.render("about", { title: "About", data, layout: "main" });
 });
 
+/* GET lokasi page. */
+router.get("/lokasi", function (req, res, next) {
+  const data = {
+    nama: "Sunrise Haven Hotel",
+    alamat: {
+      jalan: "Jl. 123 Lautan",
+      kota: "Bali",
+      provinsi: "Bali",
+      kode_pos: "80461",
+      negara: "Indonesia",
+    },
+    peta: "https://developers.google.com/static/codelabs/maps-platform/full-stack-store-locator/img/58a6680e9c8e7396.png?hl=id",
+  };
+  res.render("lokasi", { title: "Lokasi", data, layout: "main" });
+});
+
 module.exports = router;
