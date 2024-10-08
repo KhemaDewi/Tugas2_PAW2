@@ -33,4 +33,30 @@ router.get("/", function (req, res, next) {
   res.render("index", { title: "Home", data, layout: "main" });
 });
 
+/* GET about page. */
+router.get("/about", function (req, res, next) {
+  const data = {
+    visi: "Visi kami adalah menyediakan surga di mana para tamu dapat bersantai dan menyatu kembali dengan alam, menawarkan ketenangan dari hiruk pikuk kehidupan sehari-hari. Kami berusaha menciptakan suasana hangat dan ramah, memastikan bahwa setiap tamu merasa seperti di rumah sendiri selama menginap.",
+    komitmen:
+      "Di Sunrise Haven Hotel, kami berkomitmen untuk menjaga keindahan lingkungan sekitar. Kami menerapkan praktik berkelanjutan seperti mengurangi penggunaan plastik, menghemat air, dan menggunakan bahan-bahan lokal untuk restoran kami. Dengan memilih untuk menginap bersama kami, Anda berkontribusi untuk masa depan yang lebih hijau.",
+    pengalaman_tamu:
+      "Staf kami yang berdedikasi siap melayani setiap kebutuhan Anda, memastikan pengalaman yang personal dan luar biasa mulai dari check-in hingga check-out. Kami bangga dengan layanan penuh perhatian kami dan selalu siap membantu dengan rekomendasi, reservasi, dan apa pun yang mungkin Anda perlukan.",
+    kontak: [
+      {
+        jenis: "Telepon",
+        isi: "08xx-xxxx-xxxx",
+      },
+      {
+        jenis: "Email",
+        isi: "SunriseHaven@gmail.com",
+      },
+      {
+        jenis: "Instagram",
+        isi: "SunriseHaven",
+      },
+    ],
+  };
+  res.render("about", { title: "About", data, layout: "main" });
+});
+
 module.exports = router;
