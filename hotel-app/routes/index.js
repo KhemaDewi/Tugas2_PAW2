@@ -15,4 +15,15 @@ router.get('/ketersediaan', function(req, res, next) {
 res.render('ketersediaan', { title: 'Ketersedian Kamar',ketersediaan, layout: "main" })
 });
 
+router.get('/fasilitas', function(req, res, next) {
+  const fasilitas = [
+    { id: 1, name: 'Wi-Fi'},
+    { id: 2, name: 'AC'},
+    { id: 3, name: 'Kolam Renang'},
+    { id: 4, name: 'Gym'},
+    { id: 5, name: 'Restoran'}
+  ];
+res.render('fasilitas', { title: 'Fasilitas Kamar',fasilitas, layout: "main" })
+});
+
 module.exports = router;
