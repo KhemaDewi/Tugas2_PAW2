@@ -1,9 +1,36 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express', layout: "main" });
+router.get("/", function (req, res, next) {
+  const data = {
+    nama: "Sunrise Haven Hotel",
+    img: "https://plus.unsplash.com/premium_photo-1680287296835-0424869199ae?q=80&w=1635&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    deskripsi:
+      "Sunrise Haven Hotel adalah destinasi premium untuk liburan yang menyuguhkan pengalaman mewah dengan pemandangan alam yang memukau. Terletak di tepi pantai yang tenang, hotel ini menawarkan kamar-kamar elegan yang dilengkapi dengan fasilitas modern seperti Wi-Fi gratis, TV layar datar, dan balkon pribadi dengan pemandangan laut. Para tamu dapat menikmati berbagai fasilitas rekreasi, termasuk kolam renang infinity yang menghadap ke samudra, pusat kebugaran, dan spa kelas dunia yang menawarkan berbagai perawatan relaksasi. Restoran hotel menyajikan hidangan internasional dan lokal yang dibuat oleh koki berpengalaman. Dikenal dengan pelayanannya yang ramah dan profesional, Sunrise Haven Hotel memastikan setiap tamu merasa istimewa dengan perhatian terhadap detail dan suasana yang nyaman. Hotel ini ideal untuk pasangan yang mencari liburan romantis, keluarga yang ingin berlibur santai, ataupun pelancong bisnis yang menginginkan akomodasi berkualitas.",
+    fasilitas: [
+      {
+        nama: "Wi-Fi",
+        img: "https://images.unsplash.com/photo-1600238454024-bc8c1e49caba?q=80&w=1730&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        deskripsi:
+          "Menyediakan Wi-Fi gratis yang dapat diakses penuh hingga 24 jam",
+      },
+      {
+        nama: "TV",
+        img: "https://plus.unsplash.com/premium_photo-1681236323432-3df82be0c1b0?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        deskripsi:
+          "Menyediakan TV layar datar gratis yang dapat digunakan untuk hiburan",
+      },
+      {
+        nama: "Balkon Pribadi",
+        img: "https://images.unsplash.com/photo-1554780330-95c7fd3e7b44?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        deskripsi:
+          "Menyediakan Balkon dengan pemandangan laut yang dapat dinikmati secara pribadi",
+      },
+    ],
+  };
+
+  res.render("index", { title: "Home", data, layout: "main" });
 });
 
 module.exports = router;
