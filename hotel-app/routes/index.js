@@ -26,4 +26,13 @@ router.get('/fasilitas', function(req, res, next) {
 res.render('fasilitas', { title: 'Fasilitas Kamar',fasilitas, layout: "main" })
 });
 
+router.get('/tipeKamar', function(req, res, next) {
+  const tipeKamar = [
+    { id: 1, name: 'Superior', price: 100 },
+    { id: 2, name: 'Deluxe', price: 150 },
+    { id: 3, name: 'Executive Suite', price: 300 }
+  ];
+res.render('tipeKamar', { title: 'Tipe Kamar',tipeKamar, layout: "main" })
+});
+
 module.exports = router;
