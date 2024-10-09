@@ -37,17 +37,17 @@
               <a class="nav-link <%= (title === "Home" ? "active" : "") %>" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <%= (title === "about" ? "active" : "") %>" href="#">About</a>
+              <a class="nav-link <%= (title === "About" ? "active" : "") %>" href="/about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <%= (title === "lokasi" ? "active" : "") %>" href="#">Lokasi</a>
+              <a class="nav-link <%= (title === "Lokasi" ? "active" : "") %>" href="#">Lokasi</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="container my-3"><%- body %></div>
+    <div class="container my-3" style="min-height: calc(100vh - 72px - 64px - 32px);"><%- body %></div>
 
     <footer class="bg-dark text-white" style="height: 64px;">
       <p class="container align-items-center justify-content-center d-flex h-100">&copy; 2024 Sunrise Haven Hotel</p>
