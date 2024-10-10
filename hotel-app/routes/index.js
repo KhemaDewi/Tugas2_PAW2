@@ -12,7 +12,7 @@ router.get('/ketersediaan', function(req, res, next) {
     { id: 2, type: 'Deluxe'},
     { id: 3, type: 'Executive Suite'}
   ];
-res.render('ketersediaan', { title: 'Ketersedian Kamar',ketersediaan, layout: "main" })
+res.json({title:'Ketersedian kamar',ketersediaan});
 });
 
 module.exports = router;
