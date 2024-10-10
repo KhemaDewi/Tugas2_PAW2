@@ -81,7 +81,7 @@ router.get('/ketersediaan', function(req, res, next) {
     { id: 2, type: 'Deluxe'},
     { id: 3, type: 'Executive Suite'}
   ];
-res.render('ketersediaan', { title: 'Ketersedian Kamar',ketersediaan, layout: "main" })
+res.json({title:'Ketersedian kamar',ketersediaan});
 });
 
 router.get('/fasilitas', function(req, res, next) {
@@ -92,7 +92,7 @@ router.get('/fasilitas', function(req, res, next) {
     { id: 4, name: 'Gym'},
     { id: 5, name: 'Restoran'}
   ];
-res.render('fasilitas', { title: 'Fasilitas Kamar',fasilitas, layout: "main" })
+res.json({title: 'Fasilitas',fasilitas});
 });
 
 router.get('/tipeKamar', function(req, res, next) {
