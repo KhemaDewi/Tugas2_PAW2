@@ -1,0 +1,27 @@
+<div class="text-center">
+  <div class="w-75 my-5">
+    <h5>Visi</h5>
+    <p><%= data.visi %></p>
+  </div>
+
+  <div class="d-flex justify-content-end my-5">
+    <div class="w-75">
+      <h5>Komitmen</h5>
+      <p><%= data.komitmen %></p>
+    </div>
+  </div>
+
+  <div class="w-75 my-5">
+    <h5>Pengalaman Tamu</h5>
+    <p><%= data.pengalaman_tamu %></p>
+  </div>
+</div>
+
+<div>
+  <h4>Kontak kami</h4>
+  <ul class="list-unstyled">
+    <% data.kontak.forEach(data => { %>
+    <li><%= data.jenis %>: <%= data.isi %></li>
+    <% })%>
+  </ul>
+</div>
