@@ -93,6 +93,7 @@ router.get('/fasilitas', function(req, res, next) {
     { id: 5, name: 'Restoran'}
   ];
 res.json({title: 'Fasilitas',fasilitas});
+
 });
 
 router.get('/tipeKamar', function(req, res, next) {
@@ -102,6 +103,7 @@ router.get('/tipeKamar', function(req, res, next) {
     { id: 3, name: 'Executive Suite', price: 300 }
   ];
 res.json({title:'Tipe Kamar',tipeKamar});
+
 });
 
 module.exports = router;
