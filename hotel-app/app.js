@@ -8,6 +8,7 @@ const expressLayout = require("express-ejs-layouts");
 var indexRouter = require("./routes/index");
 
 var app = express();
+app.use(express.static('public'));
 
 // view engine setup
 
